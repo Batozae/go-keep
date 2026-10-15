@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 import 'config/app_constants.dart';
 import 'config/app_theme.dart';
 import 'providers/auth_provider.dart';
+import 'providers/labels_provider.dart';
+import 'providers/notes_provider.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
 import 'screens/splash_screen.dart';
 import 'services/api_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('id_ID', null);
 
   // Inisialisasi ApiService
   final apiService = ApiService();
@@ -21,6 +25,12 @@ void main() {
         Provider<ApiService>.value(value: apiService),
         ChangeNotifierProvider<AuthProvider>(
           create: (_) => AuthProvider(apiService),
+        ),
+        ChangeNotifierProvider<NotesProvider>(
+          create: (_) => NotesProvider(apiService),
+        ),
+        ChangeNotifierProvider<LabelsProvider>(
+          create: (_) => LabelsProvider(apiService),
         ),
       ],
       child: const GoKeepApp(),

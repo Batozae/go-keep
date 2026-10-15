@@ -83,7 +83,7 @@ Format error konsisten: `{ "message": "..." }` dengan status HTTP yang tepat (40
 1. **Splash, Login, Register.** Token disimpan di secure storage dan dipakai untuk auto-login. Interceptor dio menambahkan header Authorization; jika 401, kembali ke Login.
 2. **Home.** Daftar catatan grid masonry dan list (toggle), bagian "Disematkan" dan "Lainnya", search bar di atas, FAB tambah catatan.
 3. **Editor catatan.** Judul, isi, mode checklist (tambah, centang, hapus item), pilihan warna, pin, arsip, hapus, kelola label catatan. Perubahan tersimpan otomatis saat keluar dari editor.
-4. **Navigation drawer.** Catatan, Arsip, Sampah, daftar Label (tap untuk filter), Kelola Label, Logout.
+4. **Navigation drawer**. Catatan, daftar Label (tap untuk filter), Buat dan Edit Label, Arsip, Sampah. Logout lewat menu avatar di Home.
 5. **Layar Arsip dan Sampah.** Sampah punya aksi restore, hapus permanen, dan kosongkan sampah dengan dialog konfirmasi.
 6. **Pencarian** berdasarkan judul dan isi, serta filter per label.
 7. **Loading, error, dan empty state** di setiap layar, dengan pesan dalam Bahasa Indonesia.
@@ -105,4 +105,4 @@ Format error konsisten: `{ "message": "..." }` dengan status HTTP yang tepat (40
 
 ## 8. Di Luar Cakupan (jangan dikerjakan)
 
-Reminder dan notifikasi, kolaborasi, lampiran gambar atau audio, sinkronisasi offline, drag-and-drop reorder, dark mode.
+pengingat, pengaturan, bantuan, tombol Gambar/Gambar tangan/Audio di FAB, kolaborator, subitem checklist, pengurutan catatan, tema latar catatan.

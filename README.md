@@ -1,6 +1,6 @@
 # go_keep
 
-A new Flutter project.
+Aplikasi replika Google Keep yang dibuat menggunakan Flutter.
 
 ## Getting Started
 
